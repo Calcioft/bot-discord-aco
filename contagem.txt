@@ -1,0 +1,31 @@
+  // comando contagem regressiva
+  if(comando === "contagem") {
+  
+   
+    d = msgs[1];
+
+
+    while(d != 0){
+      
+      //delete msg
+      const m = await message.channel.send(d);
+      d = d - 1;
+     
+     
+      const deleteCount = 1;
+
+
+      const fetched = await message.channel.messages.fetch({limit: 1});
+      message.channel
+        .bulkDelete(fetched)
+      //fim do delete
+        sleep(1000);
+
+
+    }
+
+
+    
+  
+  
+  }
